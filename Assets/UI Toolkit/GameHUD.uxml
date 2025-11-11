@@ -1,0 +1,52 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/HudStyle.uss?fileID=7433441132597879392&amp;guid=f0d414ac9c4a68342aacb0d034162ce3&amp;type=3#HudStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; justify-content: space-between;">
+        <ui:VisualElement name="Top" style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement name="left" style="flex-grow: 1; flex-direction: column; align-items: flex-start;">
+                <ui:VisualElement name="LAP_Distance" class="BaseUI" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap; align-self: auto; align-items: flex-start; height: 0;">
+                    <ui:Label tabindex="-1" text="LAP Distance:" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LAP_Distance" class="LiveLabels" />
+                </ui:VisualElement>
+                <ui:VisualElement name="LAP_Cords" class="BaseUI" style="flex-grow: 1; height: 0; flex-direction: row; align-items: flex-start; align-self: flex-start;">
+                    <ui:Label tabindex="-1" text="LAP:" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LAP_Cords" class="LiveLabels" />
+                </ui:VisualElement>
+                <ui:VisualElement name="LAP_Angle" class="BaseUI" style="flex-grow: 1; height: 0; flex-direction: row; justify-content: space-between;">
+                    <ui:Label tabindex="-1" text="LAP angle:" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LAP_Angle" class="LiveLabels" />
+                </ui:VisualElement>
+                <ui:VisualElement name="DistanceFromLine" class="BaseUI" style="flex-grow: 1; height: 66%; flex-direction: row; justify-content: space-between;">
+                    <ui:Label tabindex="-1" text="Distance from line:" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 60px;" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DistanceFromLine" class="LiveLabels" style="height: 60px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="right" style="flex-grow: 1; flex-direction: row-reverse;">
+                <ui:VisualElement name="FPS" class="BaseUI" style="flex-grow: 1; flex-direction: row-reverse; flex-wrap: wrap-reverse; justify-content: flex-start; -unity-text-align: upper-left; align-items: flex-end;">
+                    <ui:Label tabindex="-1" text=" FPS" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="FPS" class="LiveLabels" style="height: auto; align-items: auto;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Bottom" style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement name="left" style="flex-grow: 1; flex-direction: row; align-items: flex-end; margin-left: 5px; margin-bottom: 5px; align-self: flex-end; justify-content: flex-start; -unity-text-align: upper-center;">
+                <ui:ProgressBar value="0.5" title="Throttle" high-value="1" name="ThrottleProgressBar" style="flex-direction: row-reverse; height: 95px; align-items: stretch; justify-content: space-around; -unity-text-align: upper-center; white-space: normal; position: absolute; top: -63px; width: auto;" />
+                <ui:ProgressBar value="0.3" title="Brake    " high-value="1" name="BrakeProgressBar" style="position: absolute; width: auto;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="right" style="flex-grow: 1; flex-direction: column-reverse; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; align-self: flex-end; height: 203px;">
+                <ui:VisualElement class="BaseUI" style="flex-grow: 1; flex-direction: row; justify-content: space-between; align-items: flex-end; align-self: flex-end;">
+                    <ui:Label tabindex="-1" text="Gear:" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 60px; position: relative;" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CurrentGear" style="height: 60px;" />
+                </ui:VisualElement>
+                <ui:VisualElement class="BaseUI" style="flex-grow: 1; justify-content: flex-start; align-self: flex-end; flex-direction: row; align-items: flex-end; font-size: 69px;">
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MPH" style="height: 78px;" />
+                    <ui:Label tabindex="-1" text=" MPH" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 81px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="RPMContainer" style="flex-grow: 1; position: absolute; justify-content: center; left: 635px; width: 650px; height: 150px; bottom: 70px; right: auto; -unity-text-align: middle-center; align-self: auto; flex-direction: row; align-items: flex-end;" />
+            <ui:VisualElement class="BaseUI" style="flex-grow: 1; flex-direction: row; justify-content: space-between; align-items: flex-end; align-self: flex-end; position: absolute; width: 190px; left: 865px;">
+                <ui:Label tabindex="-1" text="RPM:" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 60px; position: relative;" />
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CurrentRPM" style="height: 60px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
